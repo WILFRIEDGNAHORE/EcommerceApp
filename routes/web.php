@@ -46,21 +46,21 @@ Route::middleware(['auth', 'verified'])->group(function () {
 | Admin
 */
 Route::middleware(['auth', 'verified', 'admin'])->group(function () {
-    Route::get('/admin', fn () => view('admin.dashboard'));
+    Route::get('/admin', fn () => view('admin.dashboard'))->name('admin.dashboard');
 });
 
 /*
 | Vendor
 */
 Route::middleware(['auth', 'verified', 'vendor'])->group(function () {
-    Route::get('/vendor', fn () => view('vendor.dashboard'));
+    Route::get('/vendor', fn () => view('vendor.dashboard'))->name('vendor.dashboard');
 });
 
 /*
 | Customer
 */
 Route::middleware(['auth', 'verified', 'customer'])->group(function () {
-    Route::get('/account', fn () => view('customer.dashboard'));
+    Route::get('/account', fn () => view('customer.dashboard'))->name('customer.dashboard');
 });
 
 /*

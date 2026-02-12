@@ -18,11 +18,7 @@ class Kernel extends ConsoleKernel
     /**
      * Register the middleware for the application.
      */
-    protected $routeMiddleware = [
-    'admin' => \App\Http\Middleware\AdminMiddleware::class,
-    'vendor' => \App\Http\Middleware\VendorMiddleware::class,
-    'customer' => \App\Http\Middleware\CustomerMiddleware::class,
-];
+    
 
     /**
      * Register the commands for the application.
